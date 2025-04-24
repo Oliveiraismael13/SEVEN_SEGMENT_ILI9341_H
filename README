@@ -1,0 +1,57 @@
+# SevenSegmentDisplay
+
+Uma biblioteca para simular um display de 7 segmentos em displays gráficos TFT com o driver ILI9341, usando ESP32. Ideal para projetos embarcados que precisam representar números em formato digital clássico.
+
+## Recursos
+
+- Exibição de números inteiros e strings simulando o estilo de display de 7 segmentos
+- Suporte a brilho customizável
+- Posicionamento personalizado no display
+- Redesenho eficiente de apenas os caracteres alterados
+
+## Requisitos
+
+- Plataforma: ESP32
+- Display: Compatível com driver ILI9341
+- Bibliotecas:
+  - [Adafruit GFX](https://github.com/adafruit/Adafruit-GFX-Library)
+  - [Adafruit ILI9341](https://github.com/adafruit/Adafruit_ILI9341)
+
+## Instalação
+
+1. Copie a pasta `SevenSegmentDisplay` para a pasta `lib` do seu projeto PlatformIO ou `libraries` no Arduino IDE.
+2. Certifique-se de que as bibliotecas da Adafruit estão instaladas.
+
+## Exemplo de Uso
+
+```cpp
+#include <Adafruit_GFX.h>
+#include <Adafruit_ILI9341.h>
+#include "SevenSegmentDisplay.h"
+
+#define TFT_CS   5
+#define TFT_DC   4
+#define TFT_RST  -1
+
+Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
+SevenSegmentDisplay display(tft, 20, 50, 4); // x=20, y=50, 4 dígitos
+
+void setup() {
+  tft.begin();
+  tft.fillScreen(ILI9341_BLACK);
+
+  display.setBrightness(255);
+  display.draw("1234");
+}
+
+void loop() {
+  // Atualize conforme necessário
+}
+
+Autor
+Márcio Ismael Pinto Oliveira
+📧 [marcioismael12@gmail.com]
+🔗 [Oliveiraismael13]
+
+Licença
+Este projeto está licenciado sob a MIT License.
