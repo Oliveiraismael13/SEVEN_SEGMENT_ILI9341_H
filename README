@@ -1,30 +1,34 @@
-# SevenSegmentDisplay
+SevenSegmentDisplay
+SevenSegmentDisplay é uma biblioteca para ESP32 que simula um display de 7 segmentos em telas gráficas TFT com driver ILI9341. Ideal para projetos embarcados que necessitam representar números com o visual clássico de displays digitais.
 
-Uma biblioteca para simular um display de 7 segmentos em displays gráficos TFT com o driver ILI9341, usando ESP32. Ideal para projetos embarcados que precisam representar números em formato digital clássico.
+✨ Recursos
+Exibição de números inteiros e strings no estilo de 7 segmentos
 
-## Recursos
+Controle de brilho configurável
 
-- Exibição de números inteiros e strings simulando o estilo de display de 7 segmentos
-- Suporte a brilho customizável
-- Posicionamento personalizado no display
-- Redesenho eficiente de apenas os caracteres alterados
+Posicionamento flexível no display
 
-## Requisitos
+Atualização otimizada, redesenhando apenas caracteres alterados
 
-- Plataforma: ESP32
-- Display: Compatível com driver ILI9341
-- Bibliotecas:
-  - [Adafruit GFX](https://github.com/adafruit/Adafruit-GFX-Library)
-  - [Adafruit ILI9341](https://github.com/adafruit/Adafruit_ILI9341)
+🛠 Requisitos
+Plataforma: ESP32
 
-## Instalação
+Display: Compatível com driver ILI9341
 
-1. Copie a pasta `SevenSegmentDisplay` para a pasta `lib` do seu projeto PlatformIO ou `libraries` no Arduino IDE.
-2. Certifique-se de que as bibliotecas da Adafruit estão instaladas.
+Dependências:
 
-## Exemplo de Uso
+Adafruit GFX Library
 
-```cpp
+Adafruit ILI9341 Library
+
+📦 Instalação
+Copie a pasta SevenSegmentDisplay para a pasta lib do seu projeto no PlatformIO ou para a pasta libraries no Arduino IDE.
+
+Certifique-se de que as bibliotecas da Adafruit estejam instaladas.
+
+🚀 Exemplo de Uso
+cpp
+Copiar código
 #include <Adafruit_GFX.h>
 #include <Adafruit_ILI9341.h>
 #include "SevenSegmentDisplay.h"
@@ -45,13 +49,14 @@ void setup() {
 }
 
 void loop() {
-  // Atualize conforme necessário
+  // Atualizações dinâmicas podem ser feitas aqui
 }
-
-Autor
+👤 Autor
 Márcio Ismael Pinto Oliveira
-📧 [marcioismael12@gmail.com]
-🔗 [Oliveiraismael13]
+📧 marcioismael12@gmail.com
+🔗 GitHub: Oliveiraismael13
 
+📄 Licença
+Este projeto está licenciado sob a MIT License.
 Licença
 Este projeto está licenciado sob a MIT License.
